@@ -5,6 +5,8 @@ function SelectMenu() {
     const [listOfUser, setlistOfUser] = useState([])
     const [user, setuser] = useState({}) //make a state for store particullar user
 
+    const [username, setusername] = useState('')
+
     useEffect(() => {
         getData()
     }, [])
@@ -35,6 +37,8 @@ function SelectMenu() {
             .then((data) => {
                 console.log(data)
                 setuser(data) //then save this into state
+
+                setusername(data.username)
             })
             .catch(err => {
                 console.log(err)
@@ -68,7 +72,7 @@ function SelectMenu() {
             </select>
 
             {/* here we show the data of user */}
-            <div style={{ display: 'flex',alignItems:'center',justifyContent:'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
 
                 <div>
@@ -82,11 +86,20 @@ function SelectMenu() {
                     <h6>{user.email}</h6>
                     <h6>{user.phone}</h6>
                     <h6>{user.website}</h6>
-                    
+
                 </div>
 
             </div>
 
+
+
+            <div>
+                <input
+                    placeholder='user name *'
+                    value={username} 
+
+                    onChange={(e) => setusername(e.target.value)} />
+            </div>
 
 
 
