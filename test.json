@@ -1,0 +1,33 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Apple"
+        },
+        {
+            "id": 2,
+            "title": "Mango"
+        },
+        {
+            "id": 3,
+            "title": "Kiwi"
+        },
+        {
+            "id": 4,
+            "title": "Somthing"
+        },
+        {
+            "id": 5,
+            "title": "Test1"
+        },
+        {
+            "id": 6,
+            "title": "Test2"
+        },
+        {
+            "id": 7,
+            "title": "test4"
+        }
+
+    ]
+}
